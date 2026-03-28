@@ -1,130 +1,749 @@
 <!DOCTYPE html>
 <html lang="en">
-  <html style="background: rgba(0, 255, 213, 0.226);"></html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fresh Anointing Church</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Fresh Anointing International Healing Church</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0a6c67;
+      --primary-dark: #064b47;
+      --accent: #d8b25c;
+      --bg: #f7fbfb;
+      --text: #1c2526;
+      --muted: #647071;
+      --white: #ffffff;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --radius: 18px;
+      --header-height: 78px;
+      --section-space: clamp(3.5rem, 7vw, 6rem);
+      scroll-behavior: smooth;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.93), rgba(247,251,251,0.95)), url('https://raw.githubusercontent.com/J3ffCorp/fresh-anointing-church/main/logos.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: min(70vw, 700px);
+      opacity: 1;
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(10,108,103,0.08), transparent 35%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: var(--section-space) 0;
+      scroll-margin-top: calc(var(--header-height) + 18px);
+    }
+
+    .section-title {
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+      text-align: center;
+    }
+
+    .section-copy {
+      max-width: 760px;
+      margin: 0 auto 2.2rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(10, 108, 103, 0.09);
+    }
+
+    .nav-wrap {
+      min-height: var(--header-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: rgba(10, 108, 103, 0.05);
+      padding: 0.25rem;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      min-width: 0;
+    }
+
+    .brand-text h1 {
+      font-size: 1rem;
+      line-height: 1.15;
+    }
+
+    .brand-text p {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 1.65rem;
+      cursor: pointer;
+      color: var(--primary-dark);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-menu a {
+      font-weight: 500;
+      color: var(--text);
+      transition: color 0.25s ease;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a:focus-visible {
+      color: var(--primary);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 1.35rem;
+      border-radius: 999px;
+      border: 0;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .btn-secondary {
+      background: rgba(10, 108, 103, 0.08);
+      color: var(--primary-dark);
+    }
+
+    .hero {
+      padding: clamp(4rem, 8vw, 7rem) 0 clamp(3.5rem, 6vw, 5rem);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(10, 108, 103, 0.09);
+      color: var(--primary-dark);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .hero h2 {
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 620px;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.86);
+      border: 1px solid rgba(10, 108, 103, 0.1);
+      border-radius: calc(var(--radius) + 6px);
+      box-shadow: var(--shadow);
+      padding: 1.15rem;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 420px;
+      margin-inline: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: calc(var(--radius) + 8px);
+      box-shadow: var(--shadow);
+    }
+
+    .quick-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .quick-info .info-box,
+    .card,
+    .sermon-card,
+    .gallery-card {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(10, 108, 103, 0.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .info-box {
+      padding: 1rem;
+    }
+
+    .info-box h3 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .info-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .card {
+      padding: 1.4rem;
+    }
+
+    .card h3 {
+      margin-bottom: 0.6rem;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .service-times {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    .service-times .card {
+      padding: 1.5rem;
+    }
+
+    .service-times strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      font-size: 1.05rem;
+      color: var(--primary-dark);
+    }
+
+    .sermons-grid,
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.4rem;
+    }
+
+    .sermon-card {
+      overflow: hidden;
+    }
+
+    .sermon-card iframe {
+      width: 100%;
+      min-height: 280px;
+      border: 0;
+      display: block;
+    }
+
+    .sermon-card .content {
+      padding: 1rem 1rem 1.2rem;
+    }
+
+    .sermon-card h3,
+    .gallery-card h3 {
+      margin-bottom: 0.4rem;
+    }
+
+    .sermon-card p,
+    .gallery-card p,
+    .contact-copy,
+    .footer p {
+      color: var(--muted);
+    }
+
+    .gallery-card {
+      overflow: hidden;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .gallery-card .content {
+      padding: 1rem;
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .contact-box {
+      padding: 1.5rem;
+      background: rgba(255,255,255,0.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(10, 108, 103, 0.08);
+    }
+
+    .contact-box h3 {
+      margin-bottom: 0.8rem;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .contact-list li {
+      color: var(--muted);
+      word-break: break-word;
+    }
+
+    .map-frame {
+      width: 100%;
+      min-height: 320px;
+      border: 0;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .footer {
+      padding: 1.6rem 0 2.5rem;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .contact-wrap,
+      .service-times,
+      .grid-3,
+      .sermons-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-info {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        max-width: 500px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: calc(100% + 0.4rem);
+        right: 1rem;
+        left: 1rem;
+        background: rgba(255,255,255,0.98);
+        border: 1px solid rgba(10, 108, 103, 0.08);
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        padding: 1rem;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav-menu.open {
+        display: flex;
+      }
+
+      .nav-menu a,
+      .nav-menu .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .brand-text h1 {
+        font-size: 0.95rem;
+      }
+
+      .brand-text p {
+        font-size: 0.8rem;
+      }
+
+      .hero h2 {
+        max-width: 12ch;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: min(100% - 1rem, 1120px);
+      }
+
+      .hero {
+        padding-top: 2.5rem;
+      }
+
+      .card,
+      .contact-box,
+      .service-times .card {
+        padding: 1.1rem;
+      }
+
+      .sermon-card iframe {
+        min-height: 220px;
+      }
+
+      .gallery-card img {
+        height: 210px;
+      }
+
+      body::before {
+        background-size: min(95vw, 430px);
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Logo and Upload -->
-  <div class="logo-area">
-    <img src="https://raw.githubusercontent.com/J3ffCorp/fresh-anointing-church/main/logos.png" alt="logos" class="logo">
-    <input type="file" id="logoUpload" accept="image/*" />
-    <img id="churchLogo" alt="Church Logo">
-  </div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand" aria-label="Fresh Anointing Church Home">
+        <img class="brand-logo" src="https://raw.githubusercontent.com/J3ffCorp/fresh-anointing-church/main/logos.png" alt="Fresh Anointing Church logo">
+        <div class="brand-text">
+          <h1>Fresh Anointing International Pentecostal Healing Church</h1>
+          <p>Faith. Fellowship. Purpose.</p>
+        </div>
+      </a>
 
-  <!-- Header -->
-  <h1>Welcome to Fresh Anointing Pentecostal Holiness Church</h1>
-  <p>Experience faith, healing, fellowship, and deliverance.</p>
-  <button id="bgUploadBtn" class="hero-btn">Upload Background Image</button>
-  <input type="file" id="bgUpload" accept="image/*" style="display:none;">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
 
-  <!-- Navbar -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#ministries">Ministries</a></li>
-      <li><a href="#sermons">Sermons</a></li>
-      <li><a href="#give">Give</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Home Section -->
-  <section id="home">
-    <h2>Welcome to Our Church</h2>
-    <p>Fresh Anointing Church is a community of faith, love, and service. Join us in worship, fellowship, and spiritual growth.</p>
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <div class="section-content">
-      <div class="card">
-        <h3>Our Mission</h3>
-        <p>To share the love of Christ and make disciples through worship, teaching, and community outreach.</p>
-      </div>
-      <div class="card">
-        <h3>Pastors</h3>
-        <img src="https://raw.githubusercontent.com/J3ffCorp/fresh-anointing-church/main/pastors.jpeg" alt="pastors" class="pastors">
-        <p>Led by Pastor Beau and Carole Davis, our church thrives on guidance, prayer, and pastoral care.</p>
-      </div>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#sermons">Sermons</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary" href="https://cash.app/" target="_blank" rel="noopener noreferrer">Give</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- Ministries Section -->
-  <section id="ministries">
-    <h2>Our Ministries</h2>
-    <div class="section-content">
-      <div class="card">
-        <h3>Children's Ministry</h3>
-        <img src="https://raw.githubusercontent.com/J3ffCorp/fresh-anointing-church/main/kids.jpeg" alt="kids" class="kids">
-        <p>Fun and educational programs for kids and youth to learn about faith and love.</p>
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Welcome to worship</span>
+          <h2>A church home where faith grows and lives are changed.</h2>
+          <p>
+            Join Fresh Anointing Church for worship, prayer, teaching, and a strong community rooted in God’s word.
+            We’re here to help people grow in faith and walk in purpose.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#services">Plan Your Visit</a>
+            <a class="btn btn-secondary" href="#sermons">Watch Sermons</a>
+          </div>
+
+          <div class="quick-info">
+            <div class="info-box">
+              <h3>Service Times</h3>
+              <p>Sunday 10:00 AM<br>Wednesday 6:00 PM</p>
+            </div>
+            <div class="info-box">
+              <h3>Location</h3>
+              <p>1300 W Elm St<br>El Reno, OK, 73036</p>
+            </div>
+            <div class="info-box">
+              <h3>Give Online</h3>
+              <p>Support the ministry safely through Cash App or PayPal.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img
+            class="hero-image"
+            
+            src="https://https://raw.githubusercontent.com/J3ffCorp/fresh-anointing-church/main/pastors.jpeg?auto=format&fit=crop&w=900&q=80"
+            alt="Church worship service"
+            loading="lazy"
+             <h2 class="section-title">Meet Our Pastors Beau and Carole Davis, Used by the Lord to guide the Church through prayers and teachings </h2>
+          >
+        </div>
       </div>
-      <div class="card">
-        <h3>Youth Ministry</h3>
-        <img src="assets/images/youth.jpg" alt="Youth Ministry" class="profile-img">
-        <p>Empowering young people to grow spiritually and socially.</p>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About Our Church</h2>
+        <p class="section-copy">
+          Fresh Anointing Church exists to share the Gospel, strengthen families, and create a place where everyone can encounter God.
+        </p>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Our Mission</h3>
+            <p>To preach Christ, disciple believers, and serve the community with love, truth, and compassion.</p>
+          </article>
+          <article class="card">
+            <h3>Our Vision</h3>
+            <p>To raise people of faith who walk boldly in purpose and reflect God’s power in everyday life.</p>
+          </article>
+          <article class="card">
+            <h3>Our Community</h3>
+            <p>We welcome individuals, couples, youth, and families looking for a church home centered on worship and growth.</p>
+          </article>
+        </div>
       </div>
-      <div class="card">
-        <h3>Outreach</h3>
-        <img src="assets/images/outreach.jpg" alt="Outreach Ministry" class="profile-img">
-        <p>Serving the community through various outreach programs.</p>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="section-title">Service Schedule</h2>
+        <p class="section-copy">Come worship with us during any of our weekly gatherings.</p>
+
+        <div class="service-times">
+          <article class="card">
+            <strong>Sunday Worship Experience</strong>
+            <p> Bible Study</p>
+            <p> 9:30 AM</p>
+            <p> Sunday Sermon</articlep>
+            <p>10:30 AM</p>
+            <p>Powerful praise, prayer, and biblical teaching for the whole family.</p>
+          </article>
+          <article class="card">
+            <strong>Midweek Bible Study</strong>
+            <p>Wednesday 6:00 PM</p>
+            <p>Grow deeper in the Word with practical, encouraging teaching.</p>
+          </article>
+        </div>
       </div>
+    </section>
+
+    <section class="section" id="sermons">
+      <div class="container">
+        <h2 class="section-title">Latest Sermons</h2>
+        <p class="section-copy">Replace the sample YouTube video IDs below with your church’s actual sermon links.</p>
+
+        <div class="sermons-grid">
+          <article class="sermon-card">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Sermon video 1"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+            <div class="content">
+              <h3>Walking by Faith</h3>
+              <p>A message of trust, obedience, and bold faith in every season.</p>
+            </div>
+          </article>
+
+          <article class="sermon-card">
+            <iframe
+              src="https://www.youtube.com/embed/9bZkp7q19f0"
+              title="Sermon video 2"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+            <div class="content">
+              <h3>Fresh Anointing</h3>
+              <p>Be renewed, strengthened, and equipped to live with purpose.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <h2 class="section-title">Church Life</h2>
+        <p class="section-copy">Use smaller, optimized images with consistent crop sizes so the layout stays clean.</p>
+
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img src="https://raw.githubusercontent.com/J3ffCorp/fresh-anointing-church/main/kids.jpeg?auto=format&fit=crop&w=900&q=80" alt="Church congregation" loading="lazy">
+            <div class="content">
+              <h3>Penny Match</h3>
+              <p>We Encourage Our Children & Youth Ministry for Growth in Christ.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=900&q=80" alt="Church fellowship gathering" loading="lazy">
+            <div class="content">
+              <h3>Fellowship</h3>
+              <p>Building strong community through connection and care.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact & Visit</h2>
+        <p class="section-copy contact-copy">We’d love to welcome you. Reach out with questions or stop by for a service.</p>
+
+        <div class="contact-wrap">
+          <div class="contact-box">
+            <h3>Get in Touch</h3>
+            <ul class="contact-list">
+              <li><strong>Address:</strong> 1300 W Elm St, El Reno, OK, 73036</li>
+              <li><strong>Phone:</strong> (405) 986-3331</li>
+              <li><strong>Email:</strong> info@freshanointingchurch.org</li>
+              <li><strong>Giving:</strong> <a href="https://cash.app/" target="_blank" rel="noopener noreferrer">Cash App</a> | <a href="https://www.paypal.com/" target="_blank" rel="noopener noreferrer">PayPal</a></li>
+            </ul>
+          </div>
+
+          <iframe
+            class="map-frame"
+            title="Map to Fresh Anointing Church"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=1300+W+Elm+St,+El+Reno,+OK&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Fresh Anointing Church. All rights reserved.</p>
     </div>
-  </section>
-
-  <!-- Sermons Section -->
-  <section id="sermons">
-    <h2>Sermons</h2>
-    <div class="section-content">
-      <div class="card">
-        <h3>Latest Sermon</h3>
-        <img src="assets/images/latest-sermon.jpg" alt="Latest Sermon" class="profile-img">
-        <p>Watch or listen to our latest message from Pastor Beau.</p>
-      </div>
-      <div class="card">
-        <h3>Archive</h3>
-        <img src="assets/images/sermon-archive.jpg" alt="Sermon Archive" class="profile-img">
-        <p>Explore past sermons and teachings online anytime.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Give Section -->
-  <section id="give" class="give-bg">
-    <h2>Give</h2>
-    <div class="give-section">
-      <p>Your generosity helps us continue our mission. Donate securely online.</p>
-      <button class="donate-btn">Donate Now</button>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <div class="section-content">
-      <div class="card">
-        <h3>Address</h3>
-        <p>1300 W Watts St, El Reno, OK, 73036</p>
-      </div>
-      <div class="card">
-        <h3>Email & Phone</h3>
-        <p>Email: info@freshanointingchurch.com</p>
-        <p>Phone: (405) 986-3331</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Fresh Anointing Church. All rights reserved.</p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+
+    navToggle?.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        navToggle?.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 </body>
 </html>
