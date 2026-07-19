@@ -333,14 +333,14 @@ export default function Home() {
             className="text-center mb-12"
           >
             <motion.div variants={fadeUp} className="flex items-center justify-center gap-3 mb-4">
-              <Radio className="text-red-500 w-5 h-5 animate-pulse" />
-              <span className="text-red-400 uppercase tracking-widest text-sm font-semibold">Live Streaming</span>
+              <Youtube className="text-red-500 w-5 h-5" />
+              <span className="text-red-400 uppercase tracking-widest text-sm font-semibold">Watch Online</span>
             </motion.div>
             <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-serif mb-4">
-              Connect With Us <span className="text-amber-400">Live</span>
+              Sermons &amp; <span className="text-amber-400">Messages</span>
             </motion.h2>
             <motion.p variants={fadeUp} className="text-stone-400 text-lg max-w-2xl mx-auto">
-              Can't make it in person? Join us online — we stream our Sunday and Wednesday services live on YouTube so you can worship with us from anywhere.
+              Can't make it in person? Watch our sermons and messages on YouTube — powerful teaching and worship available anytime, anywhere.
             </motion.p>
           </motion.div>
 
@@ -351,11 +351,11 @@ export default function Home() {
             transition={{ duration: 0.7 }}
             className="max-w-4xl mx-auto"
           >
-            {/* YouTube embed — latest live stream */}
+            {/* YouTube embed — latest video */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-stone-700 mb-8" style={{ aspectRatio: '16/9' }}>
               <iframe
-                src="https://www.youtube.com/embed?listType=user_uploads&list=FreshAnointingIPHC&index=0"
-                title="Fresh Anointing Church Live Stream"
+                src="https://www.youtube.com/embed?listType=user_uploads&list=FreshAnointingIPHC"
+                title="Fresh Anointing Church — Sermons & Messages"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 className="absolute inset-0 w-full h-full"
@@ -365,13 +365,13 @@ export default function Home() {
             {/* CTA row */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="https://www.youtube.com/@FreshAnointingIPHC/streams"
+                href="https://www.youtube.com/@FreshAnointingIPHC/videos"
                 target="_blank"
                 rel="noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-red-900/40 hover:scale-105"
               >
                 <Youtube className="w-5 h-5" />
-                Watch Live on YouTube
+                Watch on YouTube
               </a>
               <a
                 href="https://www.youtube.com/@FreshAnointingIPHC"
