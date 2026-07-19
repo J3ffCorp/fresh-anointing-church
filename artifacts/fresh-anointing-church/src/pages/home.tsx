@@ -13,6 +13,7 @@ import communityFellowship from '@assets/Pastor_Hands_1784488102393.jpg';
 import kidsYouth from '@assets/DSCF0139_1784489541536.JPG';
 import outreachBash from '@assets/End_of_year_Bash_1784489570003.jpg';
 import baptismPhoto from '@assets/Batism_1784489929199.jpg';
+import mensGroup from '@assets/mens_group_1784490112968.png';
 
 export default function Home() {
   return (
@@ -271,9 +272,10 @@ export default function Home() {
                 image: baptismPhoto,
               },
               {
-                icon: <Music size={32} />,
-                title: "Worship Arts",
-                desc: "Using our gifts to create atmospheres where people can encounter the presence of God."
+                icon: <Users size={32} />,
+                title: "MOG — Men of God",
+                desc: "Iron sharpens iron. Men gathering every 2nd Saturday at 9AM to pray, grow, and become the men God has called them to be.",
+                image: mensGroup,
               },
               {
                 icon: <Users size={32} />,
