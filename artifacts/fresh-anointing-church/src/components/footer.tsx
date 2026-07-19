@@ -49,14 +49,14 @@ export function Footer() {
             </div>
           </div>
           
-          <a href="tel:+14050000000" className="flex items-center gap-3 group">
+          <a href="tel:+14059863331" className="flex items-center gap-3 group">
             <Phone size={18} className="text-amber-500 group-hover:text-amber-400 transition-colors shrink-0" />
-            <span className="text-sm group-hover:text-white transition-colors">(405) 555-0199</span> {/* Placeholder phone since none was provided */}
+            <span className="text-sm group-hover:text-white transition-colors">(405) 986-3331</span>
           </a>
           
-          <a href="mailto:info@freshanointingchurch.com" className="flex items-center gap-3 group">
+          <a href="mailto:freshanointing888@gmail.com" className="flex items-center gap-3 group">
             <Mail size={18} className="text-amber-500 group-hover:text-amber-400 transition-colors shrink-0" />
-            <span className="text-sm group-hover:text-white transition-colors">hello@freshanointingchurch.com</span>
+            <span className="text-sm group-hover:text-white transition-colors">freshanointing888@gmail.com</span>
           </a>
         </div>
       </div>
