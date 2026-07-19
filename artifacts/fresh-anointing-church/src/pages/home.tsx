@@ -12,6 +12,7 @@ import worshipHands from '@assets/Elders_1784487092602.png';
 import communityFellowship from '@assets/Pastor_Hands_1784488102393.jpg';
 import kidsYouth from '@assets/DSCF0139_1784489541536.JPG';
 import outreachBash from '@assets/End_of_year_Bash_1784489570003.jpg';
+import baptismPhoto from '@assets/Batism_1784489929199.jpg';
 
 export default function Home() {
   return (
@@ -265,8 +266,9 @@ export default function Home() {
               },
               {
                 icon: <BookOpen size={32} />,
-                title: "Discipleship",
-                desc: "Small groups and Bible studies designed to help you grow deep roots in the Word."
+                title: "Baptism",
+                desc: "Publicly declaring your faith through the waters of baptism — a powerful step of obedience and new life in Christ.",
+                image: baptismPhoto,
               },
               {
                 icon: <Music size={32} />,
