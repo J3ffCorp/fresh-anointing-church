@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Fresh Anointing Church"
+version = "1.0.0"
+id = "artifacts/fresh-anointing-church"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22075
+
+[services.development]
+run = "pnpm --filter @workspace/fresh-anointing-church run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/fresh-anointing-church", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/fresh-anointing-church/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22075"
+BASE_PATH = "/"
