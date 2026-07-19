@@ -405,7 +405,66 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* 7. CONTACT / FOOTER CTA */}
+      {/* 7. GIVE — CASH APP */}
+      <Section id="give" className="bg-white">
+        <Container>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="max-w-3xl mx-auto text-center"
+          >
+            <motion.div variants={fadeUp} className="flex items-center justify-center gap-3 mb-4">
+              <Heart className="text-amber-500 w-5 h-5" />
+              <span className="text-amber-600 uppercase tracking-widest text-sm font-semibold">Give Online</span>
+            </motion.div>
+            <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-serif text-stone-900 mb-4">
+              Sow Into the Kingdom
+            </motion.h2>
+            <motion.p variants={fadeUp} className="text-stone-500 text-lg mb-12 max-w-xl mx-auto">
+              Your generosity fuels our mission — reaching El Reno, raising up families, and advancing the gospel. Give quickly and securely through Cash App.
+            </motion.p>
+
+            <motion.div
+              variants={fadeUp}
+              className="bg-gradient-to-br from-stone-900 to-stone-800 rounded-3xl p-10 md:p-14 shadow-2xl relative overflow-hidden"
+            >
+              {/* decorative glow */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-amber-500/20 rounded-full blur-3xl pointer-events-none" />
+
+              <div className="relative z-10 flex flex-col items-center gap-8">
+                {/* Cash App logo mark */}
+                <div className="w-20 h-20 bg-[#00D632] rounded-2xl flex items-center justify-center shadow-lg shadow-green-900/30">
+                  <svg viewBox="0 0 24 24" className="w-11 h-11 fill-white" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm1.313 17.027l-.235 1.044a.398.398 0 0 1-.392.319h-1.372a.398.398 0 0 1-.39-.48l.217-.967a5.27 5.27 0 0 1-2.533-1.153.398.398 0 0 1-.03-.567l.944-1.01a.398.398 0 0 1 .556-.025c.56.503 1.29.795 2.07.795.672 0 1.103-.288 1.103-.737 0-.388-.27-.619-1.28-.895-1.6-.427-2.87-1.076-2.87-2.706 0-1.25.862-2.22 2.25-2.588l.218-.97a.398.398 0 0 1 .39-.32h1.372c.244 0 .42.228.37.467l-.213.946a5.1 5.1 0 0 1 1.994.923.398.398 0 0 1 .056.567l-.9 1.04a.398.398 0 0 1-.55.055 3.215 3.215 0 0 0-1.877-.624c-.64 0-.998.27-.998.674 0 .363.313.548 1.395.844 1.724.462 2.766 1.154 2.766 2.778 0 1.3-.914 2.305-2.26 2.616z"/>
+                  </svg>
+                </div>
+
+                <div>
+                  <p className="text-stone-400 text-sm uppercase tracking-widest mb-2">Our Cash App</p>
+                  <p className="text-4xl md:text-5xl font-bold text-white tracking-tight">$freshanointing888</p>
+                </div>
+
+                <a
+                  href="https://cash.app/$freshanointing888"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-3 bg-[#00D632] hover:bg-[#00b82b] text-white font-bold text-lg px-10 py-4 rounded-2xl transition-all duration-200 shadow-lg shadow-green-900/30 hover:scale-105 w-full sm:w-auto"
+                >
+                  Give Now on Cash App
+                </a>
+
+                <p className="text-stone-500 text-sm">
+                  "Each of you should give what you have decided in your heart to give." — 2 Cor. 9:7
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        </Container>
+      </Section>
+
+      {/* 8. CONTACT / FOOTER CTA */}
       <Section id="contact" className="bg-amber-50">
         <Container>
           <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-amber-100">

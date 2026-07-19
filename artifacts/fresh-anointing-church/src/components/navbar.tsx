@@ -19,6 +19,7 @@ export function Navbar() {
     { name: "About", href: "#about" },
     { name: "Ministries", href: "#ministries" },
     { name: "Messages", href: "#messages" },
+    { name: "Give", href: "#give" },
     { name: "Visit", href: "#visit" },
   ];
 
