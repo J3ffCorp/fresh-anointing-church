@@ -11,6 +11,7 @@ import sanctuaryLight from '@assets/Main_Pic_1784487403894.png';
 import worshipHands from '@assets/Elders_1784487092602.png';
 import communityFellowship from '@assets/Pastor_Hands_1784488102393.jpg';
 import kidsYouth from '@assets/DSCF0139_1784489541536.JPG';
+import outreachBash from '@assets/End_of_year_Bash_1784489570003.jpg';
 
 export default function Home() {
   return (
@@ -275,7 +276,8 @@ export default function Home() {
               {
                 icon: <Users size={32} />,
                 title: "Outreach",
-                desc: "Taking the love of Christ beyond our walls and into the heart of El Reno."
+                desc: "Taking the love of Christ beyond our walls and into the heart of El Reno.",
+                image: outreachBash,
               }
             ].map((min, idx) => (
               <motion.div 
