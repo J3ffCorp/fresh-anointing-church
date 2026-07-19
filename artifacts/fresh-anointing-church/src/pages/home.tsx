@@ -10,6 +10,7 @@ import churchBanner from '@assets/1c5872f3-0b61-4cad-9487-56d1ca65c62d_178448605
 import sanctuaryLight from '@assets/Main_Pic_1784487403894.png';
 import worshipHands from '@assets/Elders_1784487092602.png';
 import communityFellowship from '@assets/Pastor_Hands_1784488102393.jpg';
+import kidsYouth from '@assets/DSCF0139_1784489541536.JPG';
 
 export default function Home() {
   return (
@@ -258,7 +259,8 @@ export default function Home() {
               {
                 icon: <Heart size={32} />,
                 title: "Kids & Youth",
-                desc: "Raising the next generation to know God intimately and follow Him boldly."
+                desc: "Raising the next generation to know God intimately and follow Him boldly.",
+                image: kidsYouth,
               },
               {
                 icon: <BookOpen size={32} />,
@@ -282,11 +284,22 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-stone-800/50 border border-stone-700/50 p-8 rounded-2xl hover:bg-stone-800 transition-colors"
+                className="bg-stone-800/50 border border-stone-700/50 rounded-2xl hover:bg-stone-800 transition-colors overflow-hidden"
               >
-                <div className="text-amber-500 mb-6">{min.icon}</div>
-                <h3 className="font-serif text-xl mb-3">{min.title}</h3>
-                <p className="text-stone-400 text-sm leading-relaxed">{min.desc}</p>
+                {min.image && (
+                  <div className="aspect-video w-full overflow-hidden">
+                    <img
+                      src={min.image}
+                      alt={min.title}
+                      className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                )}
+                <div className="p-8">
+                  <div className="text-amber-500 mb-6">{min.icon}</div>
+                  <h3 className="font-serif text-xl mb-3">{min.title}</h3>
+                  <p className="text-stone-400 text-sm leading-relaxed">{min.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
