@@ -9,7 +9,7 @@ import { Footer } from "@/components/footer";
 import churchBanner from '@assets/1c5872f3-0b61-4cad-9487-56d1ca65c62d_1784486058624.jpg';
 import sanctuaryLight from '@assets/Main_Pic_1784487403894.png';
 import worshipHands from '@assets/Elders_1784487092602.png';
-import communityFellowship from '@assets/generated_images/community_fellowship.jpg';
+import communityFellowship from '@assets/Unity_1784488038424.png';
 
 export default function Home() {
   return (
