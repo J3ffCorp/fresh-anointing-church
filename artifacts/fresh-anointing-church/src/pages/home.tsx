@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Clock, ArrowRight, Heart, Users, BookOpen, Music } from "lucide-react";
+import { MapPin, Clock, ArrowRight, Heart, Users, BookOpen, Music, Youtube, Radio } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, Container, fadeUp, staggerContainer } from "@/components/ui/layout";
 import { Navbar } from "@/components/navbar";
@@ -320,7 +320,71 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* 6. CONTACT / FOOTER CTA */}
+      {/* 6. CONNECT WITH US LIVE — YOUTUBE */}
+      <Section id="live" className="bg-stone-900 text-white overflow-hidden">
+        <Container>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="text-center mb-12"
+          >
+            <motion.div variants={fadeUp} className="flex items-center justify-center gap-3 mb-4">
+              <Radio className="text-red-500 w-5 h-5 animate-pulse" />
+              <span className="text-red-400 uppercase tracking-widest text-sm font-semibold">Live Streaming</span>
+            </motion.div>
+            <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-serif mb-4">
+              Connect With Us <span className="text-amber-400">Live</span>
+            </motion.h2>
+            <motion.p variants={fadeUp} className="text-stone-400 text-lg max-w-2xl mx-auto">
+              Can't make it in person? Join us online — we stream our Sunday and Wednesday services live on YouTube so you can worship with us from anywhere.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="max-w-4xl mx-auto"
+          >
+            {/* YouTube embed — latest live stream */}
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-stone-700 mb-8" style={{ aspectRatio: '16/9' }}>
+              <iframe
+                src="https://www.youtube.com/embed?listType=user_uploads&list=FreshAnointingIPHC&index=0"
+                title="Fresh Anointing Church Live Stream"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+
+            {/* CTA row */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="https://www.youtube.com/@FreshAnointingIPHC/streams"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-red-900/40 hover:scale-105"
+              >
+                <Youtube className="w-5 h-5" />
+                Watch Live on YouTube
+              </a>
+              <a
+                href="https://www.youtube.com/@FreshAnointingIPHC"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 bg-stone-800 hover:bg-stone-700 text-stone-200 font-semibold px-8 py-4 rounded-xl border border-stone-600 transition-all duration-200 hover:scale-105"
+              >
+                Subscribe to Our Channel
+              </a>
+            </div>
+          </motion.div>
+        </Container>
+      </Section>
+
+      {/* 7. CONTACT / FOOTER CTA */}
       <Section id="contact" className="bg-amber-50">
         <Container>
           <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-amber-100">
