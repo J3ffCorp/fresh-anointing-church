@@ -20,13 +20,15 @@ export default function Home() {
       <section className="relative h-[90vh] min-h-[600px] max-h-[1000px] w-full flex items-center justify-center overflow-hidden">
         {/* Background Image with Parallax-like feel (sticky center, overflow hidden) */}
         <div className="absolute inset-0 z-0">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105"
-            style={{ backgroundImage: `url(${churchBanner})` }}
+          <img
+            src={churchBanner}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover object-center scale-105"
+            style={{ filter: 'brightness(0.25)' }}
           />
-          {/* Gradients for text legibility and mood */}
-          <div className="absolute inset-0 bg-gradient-to-b from-stone-900/60 via-stone-900/40 to-stone-900/80 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-amber-900/20 mix-blend-overlay" />
+          {/* Gradient for depth */}
+          <div className="absolute inset-0 bg-gradient-to-b from-stone-900/40 via-transparent to-stone-900/50" />
         </div>
 
         <Container className="relative z-10 text-center flex flex-col items-center pt-20">
@@ -46,7 +48,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-serif text-white font-bold tracking-tight mb-6 drop-shadow-lg"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif text-white font-bold tracking-tight mb-6 drop-shadow-lg"
           >
             Fresh Anointing
           </motion.h1>
@@ -70,7 +72,7 @@ export default function Home() {
             <Button size="lg" variant="gold" className="px-8 text-base h-14 w-full sm:w-auto" asChild>
               <a href="#visit">Plan Your Visit</a>
             </Button>
-            <Button size="lg" variant="outline" className="px-8 text-base h-14 w-full sm:w-auto border-white/30 text-white hover:bg-white hover:text-stone-900 backdrop-blur-sm" asChild>
+            <Button size="lg" variant="outline" className="px-8 text-base h-14 w-full sm:w-auto border-white/60 text-white bg-white/15 hover:bg-white hover:text-stone-900 backdrop-blur-sm" asChild>
               <a href="#about">Our Story</a>
             </Button>
           </motion.div>
@@ -149,7 +151,7 @@ export default function Home() {
               </div>
               
               {/* Decorative elements */}
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-[240px] z-20">
+              <div className="hidden sm:block absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-[240px] z-20">
                 <div className="flex items-start gap-4">
                   <MapPin className="text-amber-600 shrink-0 mt-1" size={24} />
                   <div>
@@ -185,7 +187,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="lg:col-span-5 relative"
             >
-              <div className="aspect-square md:aspect-[3/4] rounded-full overflow-hidden border-8 border-white shadow-xl relative z-10">
+              <div className="max-w-xs sm:max-w-sm lg:max-w-none mx-auto aspect-square md:aspect-[3/4] rounded-full overflow-hidden border-8 border-white shadow-xl relative z-10">
                 <img 
                   src={worshipHands} 
                   alt="People worshipping" 
@@ -310,7 +312,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <Music className="w-12 h-12 text-amber-500 mx-auto mb-8 opacity-80" />
-            <h2 className="text-3xl md:text-5xl font-serif text-white leading-tight mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif text-white leading-tight mb-8">
               "Behold, how good and how pleasant it is for brethren to dwell together in unity!"
             </h2>
             <p className="text-amber-400 tracking-widest uppercase text-sm font-semibold">
@@ -366,7 +368,7 @@ export default function Home() {
                 href="https://www.youtube.com/@FreshAnointingIPHC/streams"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-red-900/40 hover:scale-105"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-red-900/40 hover:scale-105"
               >
                 <Youtube className="w-5 h-5" />
                 Watch Live on YouTube
@@ -375,7 +377,7 @@ export default function Home() {
                 href="https://www.youtube.com/@FreshAnointingIPHC"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-3 bg-stone-800 hover:bg-stone-700 text-stone-200 font-semibold px-8 py-4 rounded-xl border border-stone-600 transition-all duration-200 hover:scale-105"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-stone-800 hover:bg-stone-700 text-stone-200 font-semibold px-8 py-4 rounded-xl border border-stone-600 transition-all duration-200 hover:scale-105"
               >
                 Subscribe to Our Channel
               </a>
@@ -389,7 +391,7 @@ export default function Home() {
         <Container>
           <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-amber-100">
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="p-10 md:p-14 flex flex-col justify-center">
+              <div className="p-6 sm:p-10 md:p-14 flex flex-col justify-center">
                 <h2 className="text-3xl font-serif text-stone-900 mb-4">We'd love to hear from you.</h2>
                 <p className="text-stone-600 mb-8">
                   Have a question? Need prayer? We are here for you. Reach out to our pastoral team.
