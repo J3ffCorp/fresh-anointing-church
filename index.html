@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fresh Anointing Church | El Reno, Oklahoma</title>
+
+<meta name="description" content="Fresh Anointing Church is an International Pentecostal Holiness Church in El Reno, Oklahoma. Join us Sundays at 10:30 AM and Wednesdays at 6:00 PM.">
+
+<style>
+
+/* =========================================================
+   FRESH ANOINTING CHURCH — MARK I
+   Single-file edition
+   ========================================================= */
+
+:root{
+  --gold:#d79a2b;
+  --gold-dark:#a9680e;
+  --gold-light:#f5c45c;
+  --dark:#1c1917;
+  --darker:#0c0a09;
+  --stone:#57534e;
+  --light:#fafaf9;
+  --cream:#fff8e8;
+  --white:#fff;
+  --red:#dc2626;
+  --green:#00d632;
+  --shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--light);
+  color:var(--dark);
+  line-height:1.65;
+}
+
+h1,h2,h3,h4{
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.15;
+}
+
+img{
+  display:block;
+  width:100%;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+section{
+  padding:100px 0;
+}
+
+.container{
+  width:min(1180px,90%);
+  margin:auto;
+}
+
+.gold{
+  color:var(--gold);
+}
+
+.eyebrow{
+  display:block;
+  color:var(--gold-dark);
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+.section-title{
+  font-size:clamp(2.3rem,5vw,4rem);
+  margin-bottom:20px;
+}
+
+.section-copy{
+  color:#66605b;
+  font-size:1.08rem;
+  max-width:700px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:54px;
+  padding:0 30px;
+  border-radius:9px;
+  font-weight:700;
+  transition:.25s ease;
+  cursor:pointer;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-gold{
+  background:var(--gold);
+  color:#fff;
+}
+
+.btn-gold:hover{
+  background:var(--gold-dark);
+}
+
+.btn-outline{
+  border:1px solid rgba(255,255,255,.65);
+  background:rgba(255,255,255,.12);
+  color:#fff;
+  backdrop-filter:blur(8px);
+}
+
+.btn-outline:hover{
+  background:#fff;
+  color:var(--dark);
+}
+
+
+/* ==================== NAVIGATION ==================== */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  padding:22px 0;
+  color:#fff;
+  background:linear-gradient(to bottom,rgba(0,0,0,.7),transparent);
+  transition:.3s;
+}
+
+header.scrolled{
+  padding:13px 0;
+  color:var(--dark);
+  background:rgba(255,255,255,.96);
+  box-shadow:0 3px 18px rgba(0,0,0,.08);
+  backdrop-filter:blur(10px);
+}
+
+.nav-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.45rem;
+  font-weight:bold;
+  line-height:1;
+}
+
+.brand small{
+  display:block;
+  margin-top:6px;
+  font-family:Arial,sans-serif;
+  font-size:.58rem;
+  font-weight:400;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+
+nav a{
+  font-size:.9rem;
+  font-weight:600;
+  transition:.2s;
+}
+
+nav a:hover{
+  color:var(--gold);
+}
+
+.nav-button{
+  padding:10px 18px;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:8px;
+  background:rgba(255,255,255,.12);
+}
+
+.scrolled .nav-button{
+  background:var(--gold);
+  color:#fff;
+  border-color:var(--gold);
+}
+
+.menu-btn{
+  display:none;
+  border:0;
+  background:none;
+  color:inherit;
+  font-size:1.8rem;
+  cursor:pointer;
+}
+
+
+/* ==================== HERO ==================== */
+
+.hero{
+  min-height:90vh;
+  padding:100px 0 40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+  color:#fff;
+  text-align:center;
+  background:
+    linear-gradient(rgba(18,15,13,.67),rgba(18,15,13,.75)),
+    url("attached_assets/1c5872f3-0b61-4cad-9487-56d1ca65c62d_1784486058624.jpg")
+    center/cover no-repeat;
+}
+
+.hero-content{
+  max-width:900px;
+  margin:auto;
+  position:relative;
+  z-index:2;
+  animation:rise .9s ease both;
+}
+
+.hero .eyebrow{
+  color:var(--gold-light);
+}
+
+.hero-line{
+  width:90px;
+  height:1px;
+  margin:15px auto 25px;
+  background:var(--gold);
+}
+
+.hero h1{
+  font-size:clamp(3.3rem,9vw,7rem);
+  margin-bottom:22px;
+  text-shadow:0 4px 20px rgba(0,0,0,.35);
+}
+
+.hero p{
+  max-width:720px;
+  margin:0 auto 38px;
+  color:#eee;
+  font-size:clamp(1.05rem,2.5vw,1.45rem);
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+@keyframes rise{
+  from{opacity:0;transform:translateY(25px)}
+  to{opacity:1;transform:none}
+}
+
+
+/* ==================== VISIT ==================== */
+
+#visit{
+  background:#fff;
+}
+
+.two-column{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+
+.visit-text h2{
+  font-size:clamp(2.4rem,5vw,3.8rem);
+  margin-bottom:25px;
+}
+
+.visit-text>p{
+  color:#66605b;
+  font-size:1.08rem;
+}
+
+.times{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-top:35px;
+}
+
+.time-card{
+  padding:25px;
+  background:#fafaf9;
+  border:1px solid #eeeae6;
+  border-radius:18px;
+  box-shadow:0 6px 20px rgba(0,0,0,.04);
+}
+
+.time-icon{
+  width:48px;
+  height:48px;
+  margin-bottom:15px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#fff;
+  font-size:1.4rem;
+  box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.time-card h3{
+  font-size:1.25rem;
+  margin-bottom:6px;
+}
+
+.time-card strong{
+  display:block;
+  color:var(--gold-dark);
+  font-size:1.08rem;
+}
+
+.time-card small{
+  color:#777;
+}
+
+.visit-photo{
+  position:relative;
+}
+
+.visit-photo img{
+  height:600px;
+  object-fit:cover;
+  border-radius:28px;
+  box-shadow:var(--shadow);
+}
+
+.location-card{
+  position:absolute;
+  left:-25px;
+  bottom:-25px;
+  max-width:245px;
+  padding:22px;
+  background:#fff;
+  border-radius:16px;
+  box-shadow:var(--shadow);
+}
+
+.location-card strong{
+  display:block;
+  margin-bottom:5px;
+}
+
+.location-card p{
+  color:#666;
+  font-size:.9rem;
+}
+
+.location-card a{
+  display:inline-block;
+  margin-top:8px;
+  color:var(--gold-dark);
+  font-size:.88rem;
+  font-weight:bold;
+}
+
+
+/* ==================== ABOUT ==================== */
+
+#about{
+  background:#f7f6f4;
+}
+
+.about-photo img{
+  max-width:480px;
+  height:610px;
+  margin:auto;
+  object-fit:cover;
+  border:8px solid #fff;
+  border-radius:48% 48% 45% 45%;
+  box-shadow:var(--shadow);
+}
+
+.about-copy h2{
+  font-size:clamp(2.4rem,5vw,3.7rem);
+  margin-bottom:22px;
+}
+
+.about-copy>p{
+  color:#66605b;
+  font-size:1.08rem;
+  margin-bottom:18px;
+}
+
+.gold-rule{
+  width:80px;
+  height:4px;
+  margin-bottom:25px;
+  border-radius:10px;
+  background:var(--gold);
+}
+
+.mission-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+  margin-top:35px;
+}
+
+.mission{
+  padding-left:17px;
+  border-left:3px solid var(--gold);
+}
+
+.mission h4{
+  font-size:1.25rem;
+  margin-bottom:6px;
+}
+
+.mission p{
+  color:#666;
+  font-size:.9rem;
+}
+
+
+/* ==================== MINISTRIES ==================== */
+
+#ministries{
+  background:#1c1917;
+  color:#fff;
+}
+
+.center-heading{
+  max-width:750px;
+  margin:0 auto 55px;
+  text-align:center;
+}
+
+.center-heading .eyebrow{
+  color:var(--gold);
+}
+
+.center-heading p{
+  color:#aaa5a0;
+  font-size:1.05rem;
+}
+
+.ministry-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.ministry-card{
+  overflow:hidden;
+  border:1px solid #44403c;
+  border-radius:18px;
+  background:#292524;
+  transition:.3s;
+}
+
+.ministry-card:hover{
+  transform:translateY(-5px);
+  background:#302b28;
+}
+
+.ministry-card img{
+  height:185px;
+  object-fit:cover;
+  transition:.4s;
+}
+
+.ministry-card:hover img{
+  transform:scale(1.04);
+}
+
+.ministry-info{
+  padding:26px;
+}
+
+.ministry-icon{
+  color:var(--gold);
+  font-size:1.7rem;
+  margin-bottom:14px;
+}
+
+.ministry-info h3{
+  font-size:1.25rem;
+  margin-bottom:10px;
+}
+
+.ministry-info p{
+  color:#b6b0aa;
+  font-size:.9rem;
+}
+
+
+/* ==================== SCRIPTURE ==================== */
+
+.scripture{
+  min-height:550px;
+  padding:80px 0;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  color:#fff;
+  background:
+    linear-gradient(rgba(20,17,15,.73),rgba(20,17,15,.73)),
+    url("attached_assets/Pastor_Hands_1784488102393.jpg")
+    center/cover no-repeat;
+}
+
+.scripture-inner{
+  max-width:900px;
+  margin:auto;
+}
+
+.scripture-icon{
+  color:var(--gold);
+  font-size:2.5rem;
+  margin-bottom:25px;
+}
+
+.scripture h2{
+  font-size:clamp(2rem,5vw,3.6rem);
+  margin-bottom:25px;
+}
+
+.scripture p{
+  color:var(--gold-light);
+  font-size:.8rem;
+  font-weight:bold;
+  letter-spacing:.18em;
+}
+
+
+/* ==================== MESSAGES ==================== */
+
+#messages{
+  background:#1c1917;
+  color:#fff;
+}
+
+.video{
+  position:relative;
+  width:min(900px,100%);
+  aspect-ratio:16/9;
+  margin:0 auto 30px;
+  overflow:hidden;
+  border:1px solid #44403c;
+  border-radius:18px;
+  box-shadow:var(--shadow);
+}
+
+.video iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+.youtube-buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.youtube{
+  background:var(--red);
+  color:#fff;
+}
+
+.youtube:hover{
+  background:#b91c1c;
+}
+
+.dark-button{
+  background:#292524;
+  color:#eee;
+  border:1px solid #57534e;
+}
+
+.dark-button:hover{
+  background:#44403c;
+}
+
+
+/* ==================== GIVE ==================== */
+
+#give{
+  background:#fff;
+  text-align:center;
+}
+
+.give-intro{
+  max-width:680px;
+  margin:0 auto 45px;
+}
+
+.give-intro p{
+  color:#777;
+  font-size:1.05rem;
+}
+
+.give-card{
+  position:relative;
+  max-width:800px;
+  margin:auto;
+  padding:55px 30px;
+  overflow:hidden;
+  color:#fff;
+  border-radius:28px;
+  background:linear-gradient(135deg,#1c1917,#292524);
+  box-shadow:var(--shadow);
+}
+
+.cash-icon{
+  width:80px;
+  height:80px;
+  display:grid;
+  place-items:center;
+  margin:0 auto 25px;
+  border-radius:18px;
+  background:var(--green);
+  font-size:2.6rem;
+  font-weight:bold;
+}
+
+.give-card small{
+  color:#aaa;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+}
+
+.cashtag{
+  margin:8px 0 30px;
+  font-size:clamp(2rem,6vw,3.5rem);
+  font-weight:bold;
+}
+
+.cash-button{
+  background:var(--green);
+  color:#fff;
+}
+
+.cash-button:hover{
+  background:#00b82b;
+}
+
+.verse{
+  margin-top:28px;
+  color:#888;
+  font-size:.85rem;
+}
+
+
+/* ==================== CONTACT ==================== */
+
+#contact{
+  background:var(--cream);
+}
+
+.contact-box{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  max-width:950px;
+  margin:auto;
+  overflow:hidden;
+  border:1px solid #f0dfb9;
+  border-radius:28px;
+  background:#fff;
+  box-shadow:var(--shadow);
+}
+
+.contact-main,
+.contact-info{
+  padding:55px;
+}
+
+.contact-main h2{
+  font-size:2.4rem;
+  margin-bottom:15px;
+}
+
+.contact-main p{
+  color:#666;
+  margin-bottom:25px;
+}
+
+.contact-actions{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.contact-action{
+  padding:14px 18px;
+  border:1px solid #e5e1dd;
+  border-radius:10px;
+  background:#fafaf9;
+  transition:.2s;
+}
+
+.contact-action:hover{
+  border-color:var(--gold);
+  transform:translateX(3px);
+}
+
+.contact-info{
+  color:#fff;
+  background:#1c1917;
+}
+
+.contact-info h3{
+  color:var(--gold);
+  font-size:1.7rem;
+  margin-bottom:30px;
+}
+
+.info-item{
+  margin-bottom:25px;
+}
+
+.info-item strong{
+  display:block;
+  margin-bottom:4px;
+}
+
+.info-item p,
+.info-item a{
+  color:#aaa5a0;
+  font-size:.92rem;
+}
+
+
+/* ==================== FOOTER ==================== */
+
+footer{
+  padding:70px 0 30px;
+  background:#0c0a09;
+  color:#aaa5a0;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1.5fr;
+  gap:60px;
+}
+
+.footer-brand h3{
+  color:#fff;
+  font-size:1.7rem;
+}
+
+.footer-brand span{
+  display:block;
+  margin:5px 0 20px;
+  color:var(--gold);
+  font-size:.7rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+.footer-brand p{
+  max-width:400px;
+  font-size:.9rem;
+}
+
+footer h4{
+  color:#fff;
+  margin-bottom:18px;
+  font-family:Arial,sans-serif;
+  font-size:.8rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.footer-links{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.footer-links a:hover{
+  color:var(--gold);
+}
+
+.footer-contact p,
+.footer-contact a{
+  display:block;
+  margin-bottom:10px;
+  font-size:.9rem;
+}
+
+.copyright{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  margin-top:55px;
+  padding-top:25px;
+  border-top:1px solid #292524;
+  color:#68635f;
+  font-size:.75rem;
+}
+
+
+/* ==================== RESPONSIVE ==================== */
+
+@media(max-width:950px){
+
+  section{
+    padding:80px 0;
+  }
+
+  .two-column{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+
+  .ministry-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .visit-photo{
+    max-width:650px;
+    margin:auto;
+  }
+
+  .visit-photo img{
+    height:500px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .footer-brand{
+    grid-column:1/-1;
+  }
+}
+
+@media(max-width:760px){
+
+  header{
+    padding:17px 0;
+  }
+
+  nav{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    padding:20px 5%;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    background:#fff;
+    color:var(--dark);
+    box-shadow:0 12px 25px rgba(0,0,0,.12);
+  }
+
+  nav.open{
+    display:flex;
+  }
+
+  nav a{
+    padding:13px 5px;
+    border-bottom:1px solid #eee;
+  }
+
+  nav .nav-button{
+    margin-top:12px;
+    text-align:center;
+    color:#fff;
+    background:var(--gold);
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .hero{
+    min-height:720px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    align-items:stretch;
+    max-width:320px;
+    margin:auto;
+  }
+
+  .times,
+  .mission-grid,
+  .ministry-grid,
+  .contact-box,
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .visit-photo img{
+    height:430px;
+  }
+
+  .location-card{
+    position:relative;
+    left:auto;
+    bottom:auto;
+    max-width:none;
+    margin-top:15px;
+    border:1px solid #eee;
+    box-shadow:none;
+  }
+
+  .about-photo img{
+    height:500px;
+  }
+
+  .contact-main,
+  .contact-info{
+    padding:35px 25px;
+  }
+
+  .copyright{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+@media(max-width:480px){
+
+  section{
+    padding:65px 0;
+  }
+
+  .container{
+    width:88%;
+  }
+
+  .hero h1{
+    font-size:3.2rem;
+  }
+
+  .visit-photo img,
+  .about-photo img{
+    height:390px;
+  }
+
+  .ministry-card img{
+    height:210px;
+  }
+
+  .cashtag{
+    font-size:1.8rem;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ==================== NAVIGATION ==================== -->
+
+<header id="header">
+  <div class="container nav-wrap">
+
+    <a class="brand" href="#home">
+      Fresh Anointing
+      <small>Church</small>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation">
+      ☰
+    </button>
+
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#ministries">Ministries</a>
+      <a href="#messages">Messages</a>
+      <a href="#give">Give</a>
+      <a href="#visit">Visit</a>
+      <a class="nav-button" href="#visit">Plan a Visit</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- ==================== HERO ==================== -->
+
+<section class="hero" id="home">
+
+  <div class="container hero-content">
+
+    <span class="eyebrow">
+      International Pentecostal Holiness Church
+    </span>
+
+    <div class="hero-line"></div>
+
+    <h1>Fresh Anointing</h1>
+
+    <p>
+      A place of powerful encounters, authentic community,
+      and enduring grace. Welcome home to El Reno.
+    </p>
+
+    <div class="hero-buttons">
+      <a class="btn btn-gold" href="#visit">Plan Your Visit</a>
+      <a class="btn btn-outline" href="#about">Our Story</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==================== PLAN A VISIT ==================== -->
+
+<section id="visit">
+
+  <div class="container two-column">
+
+    <div class="visit-text">
+
+      <span class="eyebrow">Join Us This Week</span>
+
+      <h2>
+        Experience the
+        <br>
+        <em class="gold">presence of God</em>
+        together.
+      </h2>
+
+      <p>
+        Whether you've been in church your whole life or you're
+        stepping through the doors for the first time, there is a
+        place for you here. Come as you are, and expect God to move.
+      </p>
+
+      <div class="times">
+
+        <div class="time-card">
+          <div class="time-icon">◷</div>
+          <h3>Sunday Morning</h3>
+          <strong>10:30 AM</strong>
+          <small>Worship, Word &amp; Kids Ministry</small>
+        </div>
+
+        <div class="time-card">
+          <div class="time-icon">◷</div>
+          <h3>Wednesday Night</h3>
+          <strong>6:00 PM</strong>
+          <small>Midweek Bible Study &amp; Prayer</small>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="visit-photo">
+
+      <img
+        src="attached_assets/Main_Pic_1784487403894.png"
+        alt="Fresh Anointing Church sanctuary"
+      >
+
+      <div class="location-card">
+        <strong>📍 Location</strong>
+
+        <p>
+          1300 West Watts<br>
+          El Reno, OK 73036
+        </p>
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=1300+West+Watts,+El+Reno,+OK+73036"
+          target="_blank"
+          rel="noopener"
+        >
+          Get Directions →
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==================== ABOUT ==================== -->
+
+<section id="about">
+
+  <div class="container two-column">
+
+    <div class="about-photo">
+      <img
+        src="attached_assets/Elders_1784487092602.png"
+        alt="Fresh Anointing Church family"
+      >
+    </div>
+
+
+    <div class="about-copy">
+
+      <span class="eyebrow">Who We Are</span>
+
+      <h2>
+        A heritage of faith.<br>
+        A future of hope.
+      </h2>
+
+      <div class="gold-rule"></div>
+
+      <p>
+        As a proud congregation of the
+        <strong>International Pentecostal Holiness Church</strong>,
+        our roots go deep into the historic Christian faith,
+        emphasizing the empowering work of the Holy Spirit in our
+        daily lives.
+      </p>
+
+      <p>
+        At Fresh Anointing, we believe that church isn't just a
+        Sunday event—it's a family. We are passionate about seeing
+        lives transformed, families restored, and our city of El Reno
+        impacted by the love of Jesus Christ.
+      </p>
+
+
+      <div class="mission-grid">
+
+        <div class="mission">
+          <h4>Our Mission</h4>
+          <p>
+            To encounter God, equip believers,
+            and extend His kingdom.
+          </p>
+        </div>
+
+        <div class="mission">
+          <h4>Our Beliefs</h4>
+          <p>
+            Rooted in Scripture, empowered by the Spirit,
+            living in grace.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==================== MINISTRIES ==================== -->
+
+<section id="ministries">
+
+  <div class="container">
+
+    <div class="center-heading">
+
+      <span class="eyebrow">Get Connected</span>
+
+      <h2 class="section-title">
+        Ministries &amp; Community
+      </h2>
+
+      <p>
+        Find your people, grow in your faith, and discover your
+        purpose. There's a place for everyone in the family.
+      </p>
+
+    </div>
+
+
+    <div class="ministry-grid">
+
+
+      <article class="ministry-card">
+
+        <img
+          src="attached_assets/DSCF0139_1784489541536.JPG"
+          alt="Kids and Youth Ministry"
+        >
+
+        <div class="ministry-info">
+          <div class="ministry-icon">♥</div>
+
+          <h3>Kids &amp; Youth</h3>
+
+          <p>
+            Raising the next generation to know God intimately
+            and follow Him boldly.
+          </p>
+        </div>
+
+      </article>
+
+
+      <article class="ministry-card">
+
+        <img
+          src="attached_assets/Batism_1784489929199.jpg"
+          alt="Baptism at Fresh Anointing Church"
+        >
+
+        <div class="ministry-info">
+          <div class="ministry-icon">✝</div>
+
+          <h3>Baptism</h3>
+
+          <p>
+            Publicly declaring your faith through the waters of
+            baptism—a powerful step of obedience and new life
+            in Christ.
+          </p>
+        </div>
+
+      </article>
+
+
+      <article class="ministry-card">
+
+        <img
+          src="attached_assets/mens_group_1784490112968.png"
+          alt="Men of God Ministry"
+        >
+
+        <div class="ministry-info">
+          <div class="ministry-icon">♟</div>
+
+          <h3>MOG — Men of God</h3>
+
+          <p>
+            Iron sharpens iron. Men gathering every 2nd Saturday
+            at 9 AM to pray, grow, and become the men God has
+            called them to be.
+          </p>
+        </div>
+
+      </article>
+
+
+      <article class="ministry-card">
+
+        <img
+          src="attached_assets/End_of_year_Bash_1784489570003.jpg"
+          alt="Fresh Anointing Church outreach"
+        >
+
+        <div class="ministry-info">
+          <div class="ministry-icon">◆</div>
+
+          <h3>Outreach</h3>
+
+          <p>
+            Taking the love of Christ beyond our walls and into
+            the heart of El Reno.
+          </p>
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==================== SCRIPTURE ==================== -->
+
+<section class="scripture">
+
+  <div class="container scripture-inner">
+
+    <div class="scripture-icon">♪</div>
+
+    <h2>
+      “Behold, how good and how pleasant it is for brethren
+      to dwell together in unity!”
+    </h2>
+
+    <p>PSALM 133:1</p>
+
+  </div>
+
+</section>
+
+
+<!-- ==================== SERMONS ==================== -->
+
+<section id="messages">
+
+  <div class="container">
+
+    <div class="center-heading">
+
+      <span class="eyebrow">▶ Watch Online</span>
+
+      <h2 class="section-title">
+        Sermons &amp; <span class="gold">Messages</span>
+      </h2>
+
+      <p>
+        Can't make it in person? Watch our sermons and messages
+        on YouTube—powerful teaching and worship available
+        anytime, anywhere.
+      </p>
+
+    </div>
+
+
+    <div class="video">
+
+      <iframe
+        src="https://www.youtube.com/embed?listType=user_uploads&list=FreshAnointingIPHC"
+        title="Fresh Anointing Church Sermons and Messages"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+
+
+    <div class="youtube-buttons">
+
+      <a
+        class="btn youtube"
+        href="https://www.youtube.com/@FreshAnointingIPHC/videos"
+        target="_blank"
+        rel="noopener"
+      >
+        ▶ Watch on YouTube
+      </a>
+
+      <a
+        class="btn dark-button"
+        href="https://www.youtube.com/@FreshAnointingIPHC"
+        target="_blank"
+        rel="noopener"
+      >
+        Subscribe to Our Channel
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==================== GIVE ==================== -->
+
+<section id="give">
+
+  <div class="container">
+
+    <div class="give-intro">
+
+      <span class="eyebrow">♥ Give Online</span>
+
+      <h2 class="section-title">
+        Sow Into the Kingdom
+      </h2>
+
+      <p>
+        Your generosity fuels our mission—reaching El Reno,
+        raising up families, and advancing the gospel.
+        Give quickly and securely through Cash App.
+      </p>
+
+    </div>
+
+
+    <div class="give-card">
+
+      <div class="cash-icon">$</div>
+
+      <small>Our Cash App</small>
+
+      <div class="cashtag">
+        $freshanointing888
+      </div>
+
+      <a
+        class="btn cash-button"
+        href="https://cash.app/$freshanointing888"
+        target="_blank"
+        rel="noopener"
+      >
+        Give Now on Cash App
+      </a>
+
+      <p class="verse">
+        “Each of you should give what you have decided
+        in your heart to give.” — 2 Corinthians 9:7
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==================== CONTACT ==================== -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="contact-box">
+
+
+      <div class="contact-main">
+
+        <span class="eyebrow">We're Here For You</span>
+
+        <h2>
+          We'd love to hear from you.
+        </h2>
+
+        <p>
+          Have a question? Need prayer? We are here for you.
+          Reach out to our pastoral team.
+        </p>
+
+
+        <div class="contact-actions">
+
+          <a
+            class="contact-action"
+            href="mailto:freshanointing888@gmail.com"
+          >
+            ✉ &nbsp; Email Fresh Anointing
+          </a>
+
+          <a
+            class="contact-action"
+            href="tel:+14059863331"
+          >
+            ☎ &nbsp; Call (405) 986-3331
+          </a>
+
+          <a
+            class="contact-action"
+            href="https://www.google.com/maps/search/?api=1&query=1300+West+Watts,+El+Reno,+OK+73036"
+            target="_blank"
+            rel="noopener"
+          >
+            📍 &nbsp; Get Directions
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="contact-info">
+
+        <h3>Contact Info</h3>
+
+
+        <div class="info-item">
+          <strong>📍 Address</strong>
+          <p>
+            1300 West Watts<br>
+            El Reno, OK 73036
+          </p>
+        </div>
+
+
+        <div class="info-item">
+          <strong>◷ Service Times</strong>
+          <p>
+            Sunday: 10:30 AM<br>
+            Wednesday: 6:00 PM
+          </p>
+        </div>
+
+
+        <div class="info-item">
+          <strong>☎ Phone</strong>
+          <a href="tel:+14059863331">
+            (405) 986-3331
+          </a>
+        </div>
+
+
+        <div class="info-item">
+          <strong>✉ Email</strong>
+          <a href="mailto:freshanointing888@gmail.com">
+            freshanointing888@gmail.com
+          </a>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==================== FOOTER ==================== -->
+
+<footer>
+
+  <div class="container">
+
+
+    <div class="footer-grid">
+
+
+      <div class="footer-brand">
+
+        <h3>Fresh Anointing</h3>
+
+        <span>Church</span>
+
+        <p>
+          A spirit-filled International Pentecostal Holiness Church
+          dedicated to encountering God's presence, equipping
+          believers, and extending His love to El Reno and beyond.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>Explore</h4>
+
+        <div class="footer-links">
+          <a href="#about">Our Story</a>
+          <a href="#ministries">Ministries</a>
+          <a href="#messages">Messages</a>
+          <a href="#give">Give</a>
+          <a href="#visit">Plan a Visit</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+
+      </div>
+
+
+      <div class="footer-contact">
+
+        <h4>Connect</h4>
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=1300+West+Watts,+El+Reno,+OK+73036"
+          target="_blank"
+          rel="noopener"
+        >
+          📍 1300 West Watts<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;El Reno, OK 73036
+        </a>
+
+        <p>
+          ◷ Sunday Service: 10:30 AM<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Wednesday Service: 6:00 PM
+        </p>
+
+        <a href="tel:+14059863331">
+          ☎ (405) 986-3331
+        </a>
+
+        <a href="mailto:freshanointing888@gmail.com">
+          ✉ freshanointing888@gmail.com
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+      <p>
+        © <span id="year"></span> Fresh Anointing Church.
+        All rights reserved.
+      </p>
+
+      <p>
+        International Pentecostal Holiness Church
+      </p>
+
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+<!-- ==================== TINY BIT OF JAVASCRIPT ==================== -->
+
+<script>
+
+const header = document.getElementById("header");
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("nav");
+
+
+/* Change navbar when scrolling */
+
+window.addEventListener("scroll", () => {
+  header.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+
+/* Mobile menu */
+
+menuBtn.addEventListener("click", () => {
+
+  nav.classList.toggle("open");
+
+  menuBtn.textContent =
+    nav.classList.contains("open") ? "✕" : "☰";
+
+});
+
+
+/* Close mobile menu after clicking a link */
+
+nav.querySelectorAll("a").forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    nav.classList.remove("open");
+    menuBtn.textContent = "☰";
+
+  });
+
+});
+
+
+/* Automatic copyright year */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+</script>
+
+
+</body>
+</html>
